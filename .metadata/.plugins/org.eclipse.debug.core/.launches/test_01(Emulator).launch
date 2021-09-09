@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="m.client.ide.launcher.emulator.id">
+<stringAttribute key="emulatorTargetId" value="m.client.emulator"/>
+<stringAttribute key="projectName" value="test_01"/>
+</launchConfiguration>

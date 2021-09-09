@@ -1,0 +1,24 @@
+@charset 'utf-8';
+
+h1{text-align: center; padding: 100px; margin-bottom: 20px;}
+#container{width: 100%; border: 1px solid #eaeaea; margin: 0 auto;}
+
+#container > div {
+	padding: 10px;
+}
+#container > div > div{
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	cursor: ns-resize;
+}
+#container > div div:nth-child(4n+1){background-color: #ffffff;}
+#container > div div:nth-child(4n+2){background-color: #cccccc;}
+#container > div div:nth-child(4n+3){background-color: #aaaaaa;}
+#container > div div:nth-child(4n+4){background-color: #888888;}
+#sortWrap div span{float: right; padding: 40px; font-size: 36px;}
+#moreData div:first-child{border-top: 1px solid #dddddd;}
+#moreData div a,#sortWrap div a{color: #ffffff; font-size: 20px; display: inline-block; padding: 40px; text-align: center;}
+#moreData div a{background-color: #44aa44;}
+#sortWrap div a{background-color: #aa4444;}
+

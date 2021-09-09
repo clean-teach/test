@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\00_ch\02_업무\novita\novita_"/>
+		<item value="D:\00_ch\02_업무\novita\NovitaTherapy"/>
+		<item value="D:\00_ch\02_업무\novita\00_자료\NovitaTherapy\NovitaTherapy"/>
+		<item value="D:\00_ch\02_업무\novita\novita"/>
+		<item value="D:\00_ch\00_test\hello_mobile"/>
+	</list>
+	<list key="installedFeatures">
+		<item value="m.client.ide.base.feature:2.1.0.201802271139"/>
+		<item value="m.client.ide.core.feature:2.1.2.201802271139"/>
+		<item value="m.client.ide.framework.feature:2.1.4.201802271139"/>
+		<item value="m.client.ide.launcher.feature:2.1.2.201802271139"/>
+		<item value="m.client.ide.tools.feature:2.1.0.201802271139"/>
+		<item value="m.client.ide.ui.feature:2.1.5.201802271139"/>
+		<item value="m.client.ide.ui.jboss.feature:2.0.2.201802271139"/>
+		<item value="m.client.ide.webserver.feature:2.0.0.201802271139"/>
+		<item value="org.eclipse.andmore.android.basic.feature:0.5.1.201701251432"/>
+		<item value="org.eclipse.andmore.feature:0.5.1.201701251432"/>
+		<item value="org.eclipse.andmore.gldebugger.feature:0.5.1.201701251432"/>
+		<item value="org.eclipse.andmore.hierarchyviewer.feature:0.5.1.201701251432"/>
+		<item value="org.eclipse.andmore.ndk.feature:0.5.1.201701251432"/>
+		<item value="org.eclipse.andmore.sign.feature:0.5.1.201701251432"/>
+		<item value="org.eclipse.andmore.traceview.feature:0.5.1.201701251432"/>
+		<item value="org.eclipse.cdt.gdb:9.4.0.201712051550"/>
+		<item value="org.eclipse.cdt:9.4.0.201712051550"/>
+		<item value="org.eclipse.datatools.connectivity.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.connectivity.oda.designer.core.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.connectivity.oda.designer.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.connectivity.oda.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.doc.user:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.enablement.sqlite.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.modelbase.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.sqldevtools.ddlgen.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.sqldevtools.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.datatools.sqldevtools.parsers.feature:1.14.1.201712071719"/>
+		<item value="org.eclipse.draw2d:3.10.100.201606061308"/>
+		<item value="org.eclipse.emf.codegen.ecore.ui:2.13.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.codegen.ecore:2.13.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.codegen.ui:2.8.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.codegen:2.12.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.common.ui:2.12.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.common:2.13.0.v20170609-0707"/>
+		<item value="org.eclipse.emf.converter:2.12.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.databinding.edit:1.4.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.databinding:1.4.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.ecore.edit:2.9.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.ecore.editor:2.13.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.ecore:2.13.0.v20170609-0707"/>
+		<item value="org.eclipse.emf.edit.ui:2.13.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.edit:2.12.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.mapping.ecore.editor:2.10.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.mapping.ecore:2.9.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.mapping.ui:2.9.0.v20170609-0928"/>
+		<item value="org.eclipse.emf.mapping:2.9.0.v20170609-0928"/>
+		<item value="org.eclipse.emf:2.13.0.v20170609-0928"/>
+		<item value="org.eclipse.gef:3.11.0.201606061308"/>
+		<item value="org.eclipse.help:2.2.102.v20171130-0510"/>
+		<item value="org.eclipse.jdt:3.13.2.v20171130-0906"/>
+		<item value="org.eclipse.mylyn.commons:3.23.0.v20170503-0014"/>
+		<item value="org.eclipse.pde:3.13.2.v20171130-0510"/>
+		<item value="org.eclipse.platform:4.7.2.v20171130-0510"/>
+		<item value="org.eclipse.rcp:4.7.2.v20171130-0510"/>
+		<item value="org.eclipse.sequoyah.device.common.feature:2.1.0.N20120718-0509"/>
+		<item value="org.eclipse.sequoyah.device.feature:2.1.0.N20120718-0509"/>
+		<item value="org.eclipse.sequoyah.localization.android.feature:2.1.1.N20120718-0509"/>
+		<item value="org.eclipse.sequoyah.localization.tools.feature:2.1.0.N20120718-0509"/>
+		<item value="org.eclipse.sequoyah.vnc.feature:2.1.0.N20120718-0509"/>
+		<item value="org.eclipse.sequoyah.vnc.protocol.feature:2.1.0.N20120718-0509"/>
+		<item value="org.eclipse.sequoyah.vnc.vncviewer.feature:2.1.0.N20120718-0509"/>
+		<item value="org.eclipse.wst.xml_ui.feature:3.9.1.v201707252002"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+		<item value="402" key="DIALOG_HEIGHT"/>
+		<item value="710" key="DIALOG_X_ORIGIN"/>
+		<item value="252" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

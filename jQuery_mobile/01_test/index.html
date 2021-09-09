@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>jquery mobile</title>
+ 
+<link rel="stylesheet" href="./jqueryMobile/jquery.mobile-1.4.5/jquery.mobile-1.4.5.css">
+<script src="./jquery/jquery-1.11.0.js"></script>
+<script src="./jqueryMobile/jquery.mobile-1.4.5/jquery.mobile-1.4.5.js"></script>
+</head>
+<body>
+ 
+<section id="page1" data-role="page">
+    <header data-role="header"><h1>jQuery Mobile</h1></header>                   
+    <div class="content" data-role="content">
+        <p>1 page</p>
+        <p><a href="#page2">go page2</a></p> 
+        <p><a href="externalPage.html" data-prefetch="true">go external page</a></p>
+
+    </div>
+    <footer data-role="footer"><h1>cofs</h1></footer>
+</section>
+ 
+<section id="page2" data-role="page">
+    <header data-role="header" data-add-back-btn="true"><h1>jQuery Mobile</h1></header>
+    <div class="content" data-role="content">
+        <p>2 page</p>
+        <p><a href="#page3">go page3</a></p>
+    </div>
+    <footer data-role="footer"><h1>cofs</h1></footer>
+</section>
+ 
+<section id="page3" data-role="page">
+    <header data-role="header" data-add-back-btn="true"><h1>jQuery Mobile</h1></header>
+    <div class="content" data-role="content">
+        <p>3 page</p>
+        <p><a href="#page1">go page1</a></p>
+    </div>
+    <footer data-role="footer"><h1>cofs</h1></footer>
+</section>
+ 
+</body>
+</html>

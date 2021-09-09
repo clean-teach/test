@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Test javascript</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        body {background-color: black; color: #ffffff;}
+    </style>
+</head>
+<body>
+    <div class="box" style="position: absolute; background-color: white; color: black; overflow: hidden;">
+        <h1>Scroll event(javascript) text</h1>
+        <p>영역 확대 후 스크롤</p>
+
+        <p>아름답고 놀이 주는 힘있다. 그와 사람은 유소년에게서 피가 두손을 이 수 착목한는 힘있다. 무엇을 얼마나 없는 뼈 풀이 고행을 맺어, 이상 자신과 약동하다. 곧 생생하며, 풀밭에 하여도 석가는 쓸쓸하랴? 뛰노는 그들의 인간이 발휘하기 것은 만천하의 피에 사랑의 듣는다. 같이 그림자는 튼튼하며, 피어나기 설산에서 이것이다. 사는가 피는 불러 발휘하기 사막이다. 그들의 이상이 것은 봄바람이다. 청춘이 가치를 우리 끓는 설산에서 거선의 대중을 피다. 크고 청춘을 생생하며, 놀이 약동하다.</p>
+        <p>바로 노년에게서 듣기만 사랑의 되려니와, 얼마나 그들은 넣는 보이는 황금시대다. 이것이야말로 우리의 인도하겠다는 것이 용기가 새 천지는 않는 교향악이다. 가진 귀는 구할 거선의 아름다우냐? 것은 천자만홍이 눈에 인생에 피에 싶이 황금시대다. 생생하며, 피어나는 할지라도 들어 보이는 얼마나 같이 보라. 하였으며, 풀밭에 무엇이 이상 별과 황금시대를 온갖 있으랴? 그들은 이것을 뭇 철환하였는가? 피부가 광야에서 풍부하게 위하여서. 청춘에서만 거선의 부패를 우는 튼튼하며, 속에 곧 우리의 것이다. 않는 뜨거운지라, 것은 주는 꽃이 굳세게 품에 끓는다. 방황하여도, 그들에게 무엇을 투명하되 싶이 기쁘며, 아름답고 이것이다.</p>
+        <p>것은 석가는 그와 사막이다. 뜨고, 사는가 설산에서 얼마나 타오르고 방황하여도, 아름답고 평화스러운 것이다. 노래하며 너의 장식하는 그들은 피다. 우리 인간에 청춘 이는 발휘하기 있는 대한 보라. 찾아 얼음 긴지라 그들에게 없으면 희망의 교향악이다. 불러 용기가 지혜는 영원히 우리의 것은 두손을 피어나기 있으랴? 없으면, 위하여 무엇을 풍부하게 군영과 피에 황금시대다. 따뜻한 그들에게 못할 우리 인간의 붙잡아 동력은 생생하며, 남는 교향악이다. 인생을 있는 내려온 가슴에 이성은 있는가? 가치를 천자만홍이 품에 피는 그것을 그들의 새가 있는가? 없는 이상은 무엇을 영락과 싹이 이상을 용기가 것이다.보라, 것이다.</p>
+    </div>
+    <div style="width: 80%; height: 300px; margin: 400vh auto 100px; background-color: brown;"></div>
+    <div style="width: 80%; height: 300px; margin: 100px auto; background-color: chartreuse;"></div>
+    <div style="width: 80%; height: 300px; margin: 100px auto; background-color:darkblue;"></div>
+    <script>
+        const box = document.querySelector('.box');
+        const winWidth = window.innerWidth;
+        const winHeight = window.innerHeight;
+        function effect(scrollTop){
+            // box.offsetWidth > 800 ? console.log(scrollTop) : console.log(scrollTop);
+
+            if(scrollTop < winHeight/1.5) {
+                box.style.width = winWidth - scrollTop * 1.2 + 'px';
+                box.style.left = winWidth/2 - box.offsetWidth/2 + 'px';
+                box.style.height = winHeight - scrollTop + 'px';
+            }
+
+            if(scrollTop < winHeight*3) {
+                box.style.top = scrollTop + (winHeight/2 - box.offsetHeight/2) + 'px';
+            }
+        }
+        effect(0);
+        document.addEventListener('scroll',function(e){
+            let scrTop = document.documentElement.scrollTop;
+            effect(scrTop);
+        });
+        window.addEventListener('load', function(){
+            console.log('새로고침');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Test javascript</title>
+    <style>
+        body {height: 5000px;}
+    </style>
+</head>
+<body>
+    <h1>Scroll event(javascript) text</h1>
+    <p>Rotate, Move, Scale</p>
+    <div class="obj-rotate" style="position: fixed; bottom: 10%; left: 50%; width:100px; height: 20px; background-color: brown;"></div>
+    <div class="obj-move" style="position: fixed; width:100px; height: 20px; background-color: chartreuse;"></div>
+    <div class="obj-scale" style="position: fixed; top: 20%; left: 20%; width:400px; height: 400px; background-color: darkcyan ;"></div>
+    <script>
+        const objRotate = document.querySelector('.obj-rotate');
+        const objMove = document.querySelector('.obj-move');
+        const objScale = document.querySelector('.obj-scale');
+        document.addEventListener('scroll',function(e){
+            let scrTop = document.documentElement.scrollTop;
+            console.log(scrTop);
+            objRotate.style.transform = `rotate(${scrTop}deg)`;
+            objMove.style.top = scrTop + 'px';
+            objScale.style.width = scrTop + 'px';
+        });
+    </script>
+</body>
+</html>

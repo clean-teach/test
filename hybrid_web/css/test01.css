@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+#sortWrap {
+	padding: 10px;
+}
+#sortWrap div {
+	margin: 10px;
+	padding: 10px 0 10px 20px;
+	background-color: #FFF;
+	border: 1px solid #ddd;
+	cursor: ns-resize;
+}
+
+#moreData div{border-bottom: 1px solid #333333;}
+#moreData div:first-child{border-top: 1px solid #333333;}
+#moreData div a,#sortWrap div a{color: #ffffff; font-size: 20px; display: inline-block; padding: 30px; text-align: center;}
+#moreData div a{background-color: #44aa44;}
+#sortWrap div a{background-color: #aa4444;}
+

@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+html,body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+    font-family: '돋움체',sans-serif; 
+}
+*{ box-sizing: border-box;}
+html, body, section, div, ul, li, p, img, input, a, textarea, button, select, table, tr, td, h1, h2, h3, h4, h5, h6{
+    padding:0;
+    margin:0;
+}
+section, aside , article, header, menu, nav, figcaption, figure, footer{ display: block;}
+fieldset, img { border:0 none}
+ul, li, ol, dl, menu, nav { list-style:none}
+blockquote, q { quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after {
+    content:'';
+    content:none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing:0;
+}
+a{
+    text-decoration: none;
+    color: #666;
+}
+img { vertical-align:top}
+input, select, textarea, button { vertical-align:middle}
+select:focus, input:focus, button:focus{ outline: none;}
+button {
+    border: 0 none;
+    background-color:transparent;
+    cursor:pointer;
+}
+button, input[type="button"], input[type="reset"], input[type="submit"]{
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+em, address, i{ font-style: normal;}
+input[type=text]::-ms-clear{ display: none;}
+input[type=password]::-ms-reveal{ display: none;}
+::selection{ color: #fff; background : #3e4141;}
+.clb{
+    content: "";
+    clear: both;
+    display: block;
+}
+
