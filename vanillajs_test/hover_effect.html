@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Hover 효과 : 물결</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        body {text-align: center;}
+        h1 {margin: 4rem auto 1rem; font-weight: bold; font-size: 4rem;}
+        .targetArea {position: relative; width: 400px; height: 100px; background-color: burlywood; margin: 200px auto; text-align: center; font-weight: bold; font-size: 2.4rem; text-shadow: 0 0 20px rgba(0,0,0,.6); color: #ffffff; display: flex; justify-content: center; align-items: center;} 
+        /* overflow: hidden; */
+        .spread {position: absolute; background-color: darkred; border-radius: 100%; width: 0px; height: 0px;}
+    </style>
+</head>
+<body>
+    <h1>마우스 후버 효과</h1>
+    <p>: 영역에 마우스가 올라가면 마우스가 접촉한 위치부터 원영역이 확대된다.</p>
+
+    <div class="targetArea">영역</div>
+
+    <script>
+        const target = document.querySelector('.targetArea');
+        const spread = document.createElement('div');
+        spread.classList.add('spread');
+
+        function extend(target) {
+            target.style.width = 1000 + 'px';
+            target.style.height = 1000 + 'px';
+            animate = setTimeout(extend,20);
+        }
+
+        target.addEventListener('mouseenter', function(e){
+            spread.style.top = e.layerY + 'px';
+            spread.style.left = e.layerX + 'px';
+            target.append(spread);
+            extend(spread);
+        });
+        target.addEventListener('mouseleave', function(e){
+            spread.remove();
+            clearTimeout(spread);
+        });
+    </script>
+</body>
+</html>
