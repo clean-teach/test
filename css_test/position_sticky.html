@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position-sticky</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        ul {position: relative; width: 60%; height: 300vh; border: 1px solid #333333; margin: 200px auto;}
+        li {display: inline-block; width: 100px; padding: 10px 40px; color: #ffffff;}
+        .static {position: static; background-color: midnightblue;}
+        .absolute {position: absolute; top: 0; left: 40%; background-color: blueviolet;}
+        .sticky {position: sticky; top: 0; left: 60%; background-color: crimson}
+        .fixed {position: fixed; top: 0; left: 80%; background-color: darkgreen}
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="static">static</li>
+        <li class="absolute">absolute</li>
+        <li class="sticky">sticky</li>
+        <li class="fixed">fixed</li>
+    </ul>
+</body>
+</html>
