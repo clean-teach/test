@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>section 단위 스크롤</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        section {height: 100vh;}
+        section:nth-child(1) {background-color: aquamarine;}
+        section:nth-child(2) {background-color: chocolate;}
+        section:nth-child(3) {background-color: darkmagenta;}
+        section:nth-child(4) {background-color: greenyellow;}
+        section:nth-child(5) {background-color: hotpink;}
+    </style>
+</head>
+<body>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        let wheelTimer;
+
+        // 각 section 클릭시 위로가기
+        sections.forEach(section => {
+            section.addEventListener('click', function(){
+                moveSection(0);
+            })
+        });
+
+        // 현재 섹션 반환 함수
+        function getCurrentScroll() {
+            let current = parseInt(document.documentElement.scrollTop/window.innerHeight)
+            return current;
+        }
+
+        // 스크롤 동작 함수
+        function moveSection(to) {
+            window.scrollTo({
+                top: window.innerHeight*to,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // 휠 이벤트 : setTimeout을 사용하여, 휠 동작이 멈출때까지 기다리는 감도를 설정한다.
+        // passive : false preventDefault()를 이용해서 이벤트 자체를 막을 수 있기 때문에, 브라우저는 scroll를 계속할지 안할지를 매번 검사하게 된다.
+        window.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            clearTimeout(wheelTimer);
+            wheelTimer = setTimeout(function() {
+                if(e.deltaY < 0) {
+                    moveSection(getCurrentScroll() - 1);
+                }else{
+                    moveSection(getCurrentScroll() + 1);
+                }
+            }, 50);
+        },{passive : false});
+    </script>
+</body>
+</html>
