@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform skew</title>
+    <style>
+        .obj {width: 400px; height: 400px; background-color: blueviolet; margin: 100px auto; transform: skewY(0); transition: 1s;}
+        .obj.skew {transform: skewY(-8deg);}
+    </style>
+    <script defer>
+        const obj = document.querySelectorAll('.obj');
+        document.addEventListener('scroll',function(e){
+                obj.classList.add('skew');
+            setTimeout(function(){
+                obj.classList.remove('skew');
+            },1000);
+        });
+    </script>
+</head>
+<body>
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+    <div class="obj"></div>
+</body>
+</html>
