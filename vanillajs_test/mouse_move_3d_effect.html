@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move event 를 이용한 3D 효과</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <style>
+        body {background-color: #000000; color: #ffffff;}
+        .wrap {width: 100vw; height: 900px; display: flex; justify-content: center; align-items: center; perspective: 400px;}
+        .card {position: absolute; width: 500px; text-align: center; transform-origin: 50%;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="card">
+            마우스를 움직이면 이 영역이 3D 공간에서 움직인다. <br />
+            움직임은 중심축을 기준으로 상하좌우로 기울어지며, <br />
+            바라보는 시점 기준으로 원근감이 중요하다. <br />
+            기본적인 물체 반응의 방향은 마우스 움직임의 반대 방향으로 한다.
+            <ul>
+                <li>이 요소들은</li>
+                <li>위의 글보다</li>
+                <li>가까이 있다</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const obj = document.querySelector('.card');
+        const errorSpaceVal = 10;
+
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+
+        document.addEventListener('mousemove', function(e){
+            if(e.x > errorSpaceVal && e.x < window.innerWidth - errorSpaceVal && e.y > errorSpaceVal && e.y < window.innerHeight - errorSpaceVal) {
+                if (e.x > window.innerWidth/2) {
+                    console.log('오른쪽');
+                }else if(e.x < window.innerWidth/2){
+                    console.log('왼쪽');
+                }
+                obj.style.transform = `rotateY(${-e.x/40}deg) rotateX(${-e.y/40}deg)`;
+                console.log('e.x = ' + e.x);
+                console.log('e.y = ' + e.y);
+            }else{
+                obj.style.transform = `rotateY(0deg) rotateX(0deg)`;
+            }
+        });
+    </script>
+</body>
+</html>
