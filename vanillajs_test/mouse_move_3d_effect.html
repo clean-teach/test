@@ -9,7 +9,10 @@
     <style>
         body {background-color: #000000; color: #ffffff;}
         .wrap {width: 100vw; height: 900px; display: flex; justify-content: center; align-items: center; perspective: 400px;}
-        .card {position: absolute; width: 500px; text-align: center; transform-origin: 50%;}
+        .card {position: absolute; width: 500px; text-align: center; line-height: 1.6rem; font-size: 1rem; transform-origin: 50%;}
+        .card ul {margin-top: 20px; display: flex; justify-content: space-around; perspective: 400px;}
+        .card li {border: 1px solid #ffffff; padding: 4px 10px; transform: translateZ(100px); filter: blur(1px); transition: .4s;}
+        .card li:hover {transform: translateZ(110px ); filter: blur(0);}
     </style>
 </head>
 <body>
@@ -30,18 +33,19 @@
     <script>
         const obj = document.querySelector('.card');
         const errorSpaceVal = 10;
+        const sensitiveY = 40;
+        const sensitiveX = 20;
+        const direction = 1; // positive or negative
 
         console.log(window.innerWidth);
         console.log(window.innerHeight);
 
         document.addEventListener('mousemove', function(e){
             if(e.x > errorSpaceVal && e.x < window.innerWidth - errorSpaceVal && e.y > errorSpaceVal && e.y < window.innerHeight - errorSpaceVal) {
-                if (e.x > window.innerWidth/2) {
-                    console.log('오른쪽');
-                }else if(e.x < window.innerWidth/2){
-                    console.log('왼쪽');
-                }
-                obj.style.transform = `rotateY(${-e.x/40}deg) rotateX(${-e.y/40}deg)`;
+                obj.style.transform = `
+                    rotateY(${direction*(window.innerWidth/2 - e.x)/sensitiveY}deg) 
+                    rotateX(${direction*(window.innerHeight/2 - e.y)/sensitiveX}deg)
+                `;
                 console.log('e.x = ' + e.x);
                 console.log('e.y = ' + e.y);
             }else{
