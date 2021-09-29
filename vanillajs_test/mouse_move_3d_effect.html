@@ -41,7 +41,7 @@
             if(e.x > errorSpaceVal && e.x < window.innerWidth - errorSpaceVal && e.y > errorSpaceVal && e.y < window.innerHeight - errorSpaceVal) {
                 obj.style.transform = `
                     rotateY(${direction*(window.innerWidth/2 - e.x)/sensitiveY}deg) 
-                    rotateX(${direction*(window.innerHeight/2 - e.y)/sensitiveX}deg)
+                    rotateX(${direction*(window.innerHeight/2 - e.y)/-sensitiveX}deg)
                 `;
             }else{
                 obj.style.transform = `rotateY(0deg) rotateX(0deg)`;
