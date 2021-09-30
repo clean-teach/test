@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST API 실습</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+</head>
+<body>
+    <h1>REST APT 실습</h1>
+    <p>본 예제는 request나 axios, jQuery와 같은 라이브러리가 아닌, 브라우저에서 지원하는 fetch() 함수를 사용하여 직접 HTTP 요청/응답을 실습한다.</p>
+    <p><a href="https://www.daleseo.com/js-window-fetch/">참고</a></p>
+    <script>
+        // GET 호출 : 단순히 데이터 가져올 때
+        window.fetch('https://jsonplaceholder.typicode.com/posts/1')
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('response: ', data);
+            })
+            .catch((error) => console.log('error: ', error));
+
+        // POST : 요청 전문을 포함
+        window.fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify({
+                title: 'Test',
+                body: 'I am testing!',
+                userId: 1
+            })
+        }).then((response) => response.json())
+        .then((data) => console.log(  data));
+
+        // PUT : 수정
+        window.fetch('https://jsonplaceholder.typicode.com/posts/1', {
+            method: 'PUT',
+            headers: {
+                'Content-Type' : 'application/json'
+            },
+            body: JSON.stringify({
+                title: 'Test PUT',
+                body: 'I am testing! PUT 했쪄염',
+                userId: 1
+            })
+        }).then((response) => response.json())
+        .then((data) => console.log(  data));
+
+        // DELETE : 삭제
+        window.fetch('https://jsonplaceholder.typicode.com/posts/1', {
+            method: 'DELETE'
+        }).then((response) => response.json())
+        .then((data) => console.log(  data));
+
+        // async/await 키워드를 이용한 사용성 개선
+        async function post(host, path, body, headers = {}) {
+            const url = `https://${host}/${path}`;
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...headers
+                },
+                body: JSON.stringify(body)
+            };
+            const res = await fetch(url, options);
+            const data = await res.json();
+            if(res.ok){
+                return data;
+            }else{
+                throw Error(data);
+            }
+        }
+        // 모듈화 된 API 호출 함수 사용
+        post('jsonplaceholder.typicode.com', 'posts', {
+            title: 'async/await 를 이용한 모듈화',
+            body: '비동기 함수를 작성하여 모듈화 한 fetch 함수',
+            userId: 1
+        })
+        .then((data) => console.log(data))
+        .catch((error) => console.log(error));
+    </script>
+</body>
+</html>
