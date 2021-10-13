@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>transform skew</title>
     <style>
-        .obj {width: 400px; height: 400px; background-color: blueviolet; margin: 100px auto; transform: skewY(0); transform-origin: 0; transition: .4s;}
-        .obj.skewDown {transform: skewY(-8deg);}
-        .obj.skewUp {transform: skewY(8deg);}
+        .obj {width: 400px; height: 400px; background-color: blueviolet; margin: 200px auto; transform: skewY(0); transform-origin: 0; transition: .2s;}
+        .obj.skewDown {transform: skewY(8deg);}
+        .obj.skewUp {transform: skewY(-8deg);}
     </style>
 </head>
 <body>
@@ -38,6 +38,7 @@
         document.addEventListener('scroll',function(e){
             getScrollDirection() == 'DOWN' ? effectClassName = 'skewDown' : effectClassName = 'skewUp'
             console.log(effectClassName);
+            
             objs.forEach(obj => {
                 obj.classList.add(effectClassName);
                 setTimeout(function(){

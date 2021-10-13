@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Apps Mail</title>
+</head>
+<body>
+    <h1>정적 HTML form 태그에서 메일 보내기: Google Apps Mail</h1>
+    <p>html의 mailto를 사용하면 간단하지만, outlook을 실행하기 때문에 불편을 초래한다. 따라서, 순수 HTML과 자바스크립트로 구현해본다.</p>
+    <p>back end server 없이 메세지를 보낸다.</p>
+
+    <form method="post" action="https://script.google.com/macros/s/AKfycbw3lAZzddBj9pwmhbe1KwsO9gInQdZJ36mPrkbemg/exec" class="gform">
+        <label for="">Name: <input type="text" name="name"></label>
+        <label for="">Message: <input type="text" name="message"></label>
+        <label for="">Email: <input type="email" name="email"></label>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
